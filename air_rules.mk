@@ -50,7 +50,7 @@ $(DSYM_ZIP): $(DSYM)
 	$(call silent,ZIP $<, \
 	zip -9rq $@ $<)
 
-$(APP_XML): $(APP_XML_IN) $(GIT_HEAD)
+$(APP_XML): $(APP_XML_IN)
 	$(call expandMacros)
 
 $(IPA): $(SWF) $(APP_XML) $(ANES) $(OTHER_RESOURCES) $(ICONS) $(EXPANDED_ANES)
