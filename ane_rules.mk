@@ -6,7 +6,7 @@ clean::
 	rm -fr $(ANE_ANDROID_LIB) gen cls jar
 	rm -fr $(WIKI_DIR)
 
-$(EXT_XML): $(EXT_XML_IN) $(GIT_HEAD)
+$(EXT_XML): $(EXT_XML_IN)
 	$(call expandMacros)
 
 $(ANE): $(EXT_XML) $(ANE_SWC) $(ANE_SWF) $(IOS_XML) $(ANE_IOS_LIB) $(ANE_ANDROID_JAR) $(ANE_BUNDLED_LIBS) $(ANE_ANDROID_JAR_DEVICE_LIBS) $(ANE_IOS_RESOURCE_DIRS)
