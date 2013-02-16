@@ -12,10 +12,11 @@ $(if $(wildcard $(FLEX_SDK)/include/FlashRuntimeExtensions.h),,$(error Invalid F
 ADT = $(FLEX_SDK)/bin/adt
 MXMLC = $(FLEX_SDK)/bin/mxmlc
 
-ASCFLAGS = +configname=airmobile -swf-version=13 -debug=$(if $(DEBUG),true,false)
+ASCFLAGS = +configname=airmobile -swf-version=18 -debug=$(if $(DEBUG),true,false)
 
 CLASSPATH += $(FLEX_SDK)/lib/android/FlashRuntimeExtensions.jar
 CLASSPATH += $(ANDROID_SDK)/tools/support/annotations.jar
+CLASSPATH += $(ANDROID_SDK)/extras/android/support/v4/android-support-v4.jar
 
 CFLAGS += -I$(FLEX_SDK)/include
 CXXFLAGS += -I$(FLEX_SDK)/include

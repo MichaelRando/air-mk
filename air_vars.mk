@@ -42,7 +42,7 @@ ANE_BUNDLED_LIBS_DIR = META-INF/ANE/iPhone-ARM-lib
 APK_KEYSTORE = $(KEYS_ROOT)/android.pfx
 APK_SIGN_OPT = -storetype PKCS12 -keystore $(APK_KEYSTORE) $(STOREPASS)
 APK_CONNECT = $(if $(findstring debug,$(APK_TARGET)),-connect $(shell ipconfig getifaddr en1))
-APK_TARGET = apk$(if $(DEBUG),-debug)
+APK_TARGET = $(if $(DEBUG),apk-debug,apk-captive-runtime)
 APK_TARGET_OPT = -target $(APK_TARGET) $(APK_CONNECT)
 APK_ADTFLAGS = -package $(APK_TARGET_OPT) $(APK_SIGN_OPT)
 
